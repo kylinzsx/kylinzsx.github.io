@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <mate charest="utf-8" />
-        <title>Hello world!</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-    </body>
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>canvas 3D地球旋转代码</title>
+</head>
+
+<body>
+
+<a-scene>
+
+	<a-camera position='0 0 3' user-height='0'></a-camera>
+	
+	<a-sphere src="img/earth_atmos_4096.jpg" radius="1.5" segments-height="53"> 
+		<a-animation attribute="rotation"
+		dur="10000"
+		fill= "forwards"
+		to="0 360 0"
+		easing="linear"
+		repeat="indefinite"></a-animation>
+	</a-sphere>
+	
+	<a-sky segments-height="100" segments-width="100"  src="img/stars_sky_night_113553_3100x1740.jpg" color="#555" rotation="0 -90 0"></a-sky>
+	
+</a-scene>
+
+<script src='js/aframe.min.js'></script>
+
+<div style="text-align:center;">
+</div>
+</body>
 </html>
