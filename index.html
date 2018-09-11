@@ -16,6 +16,8 @@ canvas { display: block; }</style>
 <body>
 <div></div>
 
+<p> hello  </p>
+
 <script>
 class Vector2 {
 	constructor(x = 0, y = 0) {
@@ -260,6 +262,10 @@ const render = function() {
 	
 	time.update();
 	context.clearRect(0, 0, canvas.width, canvas.height);
+	
+	context.font = "italic 20px 黑体";
+	context.fillStyle = "Red";
+	context.fillText("学英语请找我！",30,60,200);
 	
 	rockets.forEach(function(rocket) {
 		rocket.update(time);
